@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ink_flow_manager/pages/login_page.dart';
-import 'package:ink_flow_manager/pages/register_page.dart';
+import 'package:ink_flow_manager/pages/authentication/login_page.dart';
+import 'package:ink_flow_manager/pages/authentication/register_page.dart';
 
 class LoginOrRegisterPage extends StatefulWidget {
   const LoginOrRegisterPage({super.key});
