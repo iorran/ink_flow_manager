@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "301488040485",
+    "project_id": "ink-flow-manager",
+    "storage_bucket": "ink-flow-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301488040485:android:746d5e829fa1c8dd8aadcc",
+        "android_client_info": {
+          "package_name": "com.example.ink_flow_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301488040485-e5qgcji54fgkfsv9rj98f5hfgn2tphn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEQvbNdeij77FIQ3LCihBraeMU_IiMk9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301488040485-e5qgcji54fgkfsv9rj98f5hfgn2tphn3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "301488040485-igg89o6odqocltgeqpbf185c4ph67mte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.inkFlowManager"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
