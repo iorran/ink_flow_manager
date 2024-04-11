@@ -3,6 +3,7 @@ import 'dart:typed_data';
 
 class Term {
   String name;
+  String email;
   String birthday;
   String document;
   String phone;
@@ -23,6 +24,7 @@ class Term {
 
   Term({
     required this.name,
+    required this.email,
     required this.birthday,
     required this.document,
     required this.phone,

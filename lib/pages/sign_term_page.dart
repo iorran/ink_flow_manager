@@ -106,6 +106,7 @@ class _SignTermPageState extends State<SignTermPage> {
     Uint8List? signature = await stepFive.signatureController.toPngBytes();
     Term newTerm = Term(
       name: stepOne.nameController.text,
+      email: stepOne.emailController.text,
       birthday: stepOne.birthdayController.text,
       document: stepOne.documentController.text,
       phone: stepOne.phoneController.text,
@@ -171,21 +172,20 @@ class _SignTermPageState extends State<SignTermPage> {
                       ),
                     ),
                     const SizedBox(width: 12),
-                    if (currentStep != 0)
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: controlsDetails.onStepCancel,
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: controlsDetails.onStepCancel,
+                        style: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4.0),
                             ),
                           ),
-                          child: const Text('Anterior'),
                         ),
+                        child: const Text('Anterior'),
                       ),
+                    ),
                   ]),
                 ],
               ),
