@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:ink_flow_manager/pages/authentication/auth_page.dart';
+import 'package:ink_flow_manager/pages/home_page.dart';
 import 'package:ink_flow_manager/pages/sign_term_page.dart';
 import 'firebase_options.dart';
 
@@ -19,6 +20,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const AuthPage(),
       routes: {
+        '/home': (context) => const HomePage(),
         '/consent': (context) => const SignTermPage(),
       },
       theme: ThemeData(

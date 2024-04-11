@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "301488040485-tmhb3ddt55s3gbss736c08gucjrar0mh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ink_flow_manager",
+            "certificate_hash": "5ff02992b09e62b8cbea0525995e5018fc9bd5c9"
+          }
+        },
+        {
           "client_id": "301488040485-e5qgcji54fgkfsv9rj98f5hfgn2tphn3.apps.googleusercontent.com",
           "client_type": 3
         }

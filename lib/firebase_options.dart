@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '301488040485',
     projectId: 'ink-flow-manager',
     storageBucket: 'ink-flow-manager.appspot.com',
+    androidClientId: '301488040485-tmhb3ddt55s3gbss736c08gucjrar0mh.apps.googleusercontent.com',
     iosClientId: '301488040485-igg89o6odqocltgeqpbf185c4ph67mte.apps.googleusercontent.com',
     iosBundleId: 'com.example.inkFlowManager',
   );
