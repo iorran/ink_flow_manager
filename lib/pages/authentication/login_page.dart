@@ -62,17 +62,11 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 50),
-                const Icon(Icons.lock, size: 100),
-                const SizedBox(height: 50),
-                Text(
-                  'Welcome back you\'ve been missed!',
-                  style: TextStyle(
-                    color: Colors.grey[700],
-                    fontSize: 16,
-                  ),
+                Image.asset(
+                  'lib/images/logo.png',
+                  height: 300,
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 10),
                 MyTextField(
                   controller: emailController,
                   hintText: 'Email',
@@ -99,12 +93,12 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 20),
                 MyButton(
                   label: "Sign In",
                   onTap: signUserIn,
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Row(

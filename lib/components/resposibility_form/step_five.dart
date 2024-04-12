@@ -5,7 +5,7 @@ class StepFive extends StatelessWidget {
   final signatureController = SignatureController(
     penStrokeWidth: 3,
     penColor: Colors.black,
-    exportBackgroundColor: Colors.yellowAccent,
+    exportBackgroundColor: Colors.transparent,
   );
   Function() clear;
 

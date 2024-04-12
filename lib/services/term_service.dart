@@ -7,7 +7,8 @@ class TermService {
 
   Future<void> save(Term term) {
     return collection.add({
-      'name': term.birthday,
+      'name': term.name,
+      'email': term.email,
       'birthday': term.birthday,
       'document': term.document,
       'phone': term.phone,

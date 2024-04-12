@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const AuthPage(),
       routes: {
-        '/home': (context) => const HomePage(),
+        '/home': (context) => HomePage(),
         '/consent': (context) => const SignTermPage(),
       },
       theme: ThemeData(

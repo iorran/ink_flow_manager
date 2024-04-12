@@ -154,7 +154,8 @@ class _SignTermPageState extends State<SignTermPage> {
               margin: const EdgeInsets.only(top: 20),
               child: Column(
                 children: [
-                  if (message != "") Text(message),
+                  if (message != "")
+                    Text(message, style: const TextStyle(color: Colors.red)),
                   if (message != "") const SizedBox(height: 10),
                   Row(children: [
                     Expanded(
