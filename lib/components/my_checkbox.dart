@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyCheckbox extends StatelessWidget {
-  final String? Function(String?)? validator;
+  final String? Function(bool?)? validator;
   final GlobalKey<FormFieldState> controller;
+  final String label;
 
   const MyCheckbox({
     super.key,
     required this.controller,
+    required this.label,
     this.validator,
   });
 
@@ -15,10 +17,7 @@ class MyCheckbox extends StatelessWidget {
     return FormField(
       key: controller,
       initialValue: false,
-      validator: (val) {
-        if (val == false) return 'Compo obrigatório';
-        return null;
-      },
+      validator: validator,
       builder: (FormFieldState<bool> field) {
         return InputDecorator(
           decoration: InputDecoration(
@@ -26,9 +25,9 @@ class MyCheckbox extends StatelessWidget {
             enabledBorder: InputBorder.none,
           ),
           child: SwitchListTile(
-            title: const Text(
-              "Afirmo ter conferido todos os detalhes da tatuagem (posição, grafia, datas, desenho, etc). Estou ciente de que a tatuagem é um processo artístico.",
-              style: TextStyle(fontWeight: FontWeight.bold),
+            title: Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
             contentPadding: EdgeInsets.zero,
             value: field.value!,

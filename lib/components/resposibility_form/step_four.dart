@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ink_flow_manager/components/my_textfield.dart';
+import 'package:ink_flow_manager/components/my_checkbox.dart';
 
 class StepFour extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
-  TextEditingController q1 = TextEditingController();
-  TextEditingController q2 = TextEditingController();
-  TextEditingController q3 = TextEditingController();
-  TextEditingController q4 = TextEditingController();
+  final GlobalKey<FormFieldState> q1 = GlobalKey();
+  final GlobalKey<FormFieldState> q2 = GlobalKey();
+  final GlobalKey<FormFieldState> q3 = GlobalKey();
 
   StepFour({super.key});
 
@@ -17,65 +16,29 @@ class StepFour extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Indique se há diagnóstico positivo para Hepatite B e C, HIV/AIDS, sífilis, tuberculose, herpes, eczema, psoríase, acne, rosácea, diabetes, distúrbios de coagulação sanguínea, problemas cardíacos, doenças autoimunes, câncer, epilepsia, gravidez, queloide, anemia, hemofilia ou doença autoimune, vitiligo.",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          MyTextField(
+          MyCheckbox(
+            label:
+                "Comprometo-me a seguir as instruções repassadas pelo profissional, a fim de que a cicatrização seja a melhor possível, estando ciente de que cada pessoa possui um tempo específico e próprio de reação.",
             controller: q1,
-            hintText: "Especifique.",
-            obscureText: false,
-            keyboardType: TextInputType.multiline,
-            padding: const EdgeInsets.all(0),
+            validator: (val) {
+              if (val == false) return 'Compo obrigatório';
+              return null;
+            },
           ),
-          const SizedBox(height: 25),
-          const Text(
-            "Faz de uso de medicação de uso contínuo?",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          MyTextField(
+          MyCheckbox(
+            label:
+                "Estou ciente de que qualquer problema com a minha tatuagem deve ser tratado diretamente com o tatuador.",
             controller: q2,
-            hintText: "Especifique.",
-            obscureText: false,
-            keyboardType: TextInputType.multiline,
-            padding: const EdgeInsets.all(0),
+            validator: (val) {
+              if (val == false) return 'Compo obrigatório';
+              return null;
+            },
           ),
-          const SizedBox(height: 25),
-          const Text(
-            "Possui Alergia a algum cosmético?",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          MyTextField(
+          MyCheckbox(
+            label:
+                "Autorizo a veiculação do trabalho executado através meio de comunicação isentando-o de qualquer bônus e/ou ônus advindo da exposição da imagem e qualquer processo decorrente.",
             controller: q3,
-            hintText: "Especifique.",
-            obscureText: false,
-            keyboardType: TextInputType.multiline,
-            padding: const EdgeInsets.all(0),
           ),
-          const SizedBox(height: 25),
-          const Text(
-            "Tem cirurgia recente no local?",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          MyTextField(
-            controller: q4,
-            hintText: "Especifique.",
-            obscureText: false,
-            keyboardType: TextInputType.multiline,
-            padding: const EdgeInsets.all(0),
-          )
         ],
       ),
     );

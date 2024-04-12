@@ -12,13 +12,16 @@ class Term {
   String s2Q2;
   String s2Q3;
   String s2Q4;
-  String s3Q1;
-  String s3Q2;
-  String s3Q3;
-  String s4Q1;
-  String s4Q2;
-  String s4Q3;
-  String s4Q4;
+  bool s3Q1;
+  bool s3Q2;
+  bool s3Q3;
+  bool s3Q4;
+  String s3Q5;
+  String s3Q6;
+  String s3Q7;
+  bool s4Q1;
+  bool s4Q2;
+  bool s4Q3;
   Uint8List? signature;
   final Timestamp created = Timestamp.now();
 
@@ -36,10 +39,13 @@ class Term {
     required this.s3Q1,
     required this.s3Q2,
     required this.s3Q3,
+    required this.s3Q4,
+    required this.s3Q5,
+    required this.s3Q6,
+    required this.s3Q7,
     required this.s4Q1,
     required this.s4Q2,
     required this.s4Q3,
-    required this.s4Q4,
     required this.signature,
   });
 }

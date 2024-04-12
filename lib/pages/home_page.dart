@@ -52,41 +52,101 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                      child: Image.memory(getImageBinary(data['signature']))),
+                    child: Image.memory(
+                      getImageBinary(data['signature']),
+                    ),
+                  ),
                   const SizedBox(height: 20),
                   Item(
-                      label: "Data: ",
-                      value: DateFormat('dd/MM/yyyy, HH:mm')
-                          .format(data['created'].toDate())),
-                  Item(label: "Nome: ", value: data['name']),
-                  Item(label: "Email: ", value: data['email']),
-                  Item(label: "Aniversário: ", value: data['birthday']),
-                  Item(label: "Documento: ", value: data['document']),
-                  Item(label: "Tel: ", value: data['phone']),
+                    label: "Data: ",
+                    value: DateFormat('dd/MM/yyyy, HH:mm').format(
+                      data['created'].toDate(),
+                    ),
+                  ),
                   Item(
-                      label:
-                          "Indique se há diagnóstico positivo para Hepatite B e C, HIV/AIDS, sífilis, tuberculose, herpes, eczema, psoríase, acne, rosácea, diabetes, distúrbios de coagulação sanguínea, problemas cardíacos, doenças autoimunes, câncer, epilepsia, gravidez, queloide, anemia, hemofilia ou doença autoimune, vitiligo.: ",
-                      value: data['s2Q1']),
+                    label: "Nome: ",
+                    value: data['name'],
+                  ),
                   Item(
-                      label: "Faz de uso de medicação de uso contínuo?: ",
-                      value: data['s2Q2']),
+                    label: "Email: ",
+                    value: data['email'],
+                  ),
                   Item(
-                      label: "Possui Alergia a algum cosmético?: ",
-                      value: data['s2Q3']),
+                    label: "Aniversário: ",
+                    value: data['birthday'],
+                  ),
                   Item(
-                      label: "Tem cirurgia recente no local?: ",
-                      value: data['s2Q4']),
+                    label: "Documento: ",
+                    value: data['document'],
+                  ),
                   Item(
-                      label: "Indique o valor da tatuagem: ",
-                      value: data['s3Q1']),
+                    label: "Tel: ",
+                    value: data['phone'],
+                  ),
                   Item(
-                      label: "Zona do corpo a ser feito: ",
-                      value: data['s3Q2']),
-                  Item(label: "Desenho: ", value: data['s3Q3']),
-                  Item(label: "P2: ", value: data['s4Q1']),
-                  Item(label: "P2: ", value: data['s4Q2']),
-                  Item(label: "P2: ", value: data['s4Q3']),
-                  Item(label: "P2: ", value: data['s4Q4']),
+                    label:
+                        "Indique se há diagnóstico positivo para Hepatite B e C, HIV/AIDS, sífilis, tuberculose, herpes, eczema, psoríase, acne, rosácea, diabetes, distúrbios de coagulação sanguínea, problemas cardíacos, doenças autoimunes, câncer, epilepsia, gravidez, queloide, anemia, hemofilia ou doença autoimune, vitiligo.: ",
+                    value: data['s2Q1'],
+                  ),
+                  Item(
+                    label: "Faz de uso de medicação de uso contínuo?: ",
+                    value: data['s2Q2'],
+                  ),
+                  Item(
+                    label: "Possui Alergia a algum cosmético?: ",
+                    value: data['s2Q3'],
+                  ),
+                  Item(
+                    label: "Tem cirurgia recente no local?: ",
+                    value: data['s2Q4'],
+                  ),
+                  Item(
+                    label:
+                        "Afirmo ter conferido todos os detalhes da tatuagem (posição, grafia, datas, desenho, etc). Estou ciente de que a tatuagem é um processo artístico: ",
+                    value: data['s3Q1'] ? "Sim" : "Nāo",
+                  ),
+                  Item(
+                    label:
+                        "Não fiz uso de nenhum anestésico e estou ciente que caso seja descoberto o uso durante o procedimento, o mesmo será interrompido sem devolução do valor pago: ",
+                    value: data['s3Q2'] ? "Sim" : "Nāo",
+                  ),
+                  Item(
+                    label: "Confirmo ter mais de 18 Anos: ",
+                    value: data['s3Q3'] ? "Sim" : "Nāo",
+                  ),
+                  Item(
+                    label:
+                        "Afirmo ter ciência de há câmeras no ambiente laboral e autorizo a gravação de minha imagem: ",
+                    value: data['s3Q4'] ? "Sim" : "Nāo",
+                  ),
+                  Item(
+                    label: "Indique o valor da tatuagem: ",
+                    value: data['s3Q5'],
+                  ),
+                  Item(
+                    label: "Zona do corpo a ser feito: ",
+                    value: data['s3Q6'],
+                  ),
+                  Item(
+                    label: "Desenho: ",
+                    value: data['s3Q7'],
+                  ),
+                  Item(
+                    label:
+                        "Comprometo-me a seguir as instruções repassadas pelo profissional, a fim de que a cicatrização seja a melhor possível, estando ciente de que cada pessoa possui um tempo específico e próprio de reação: ",
+                    value: data['s4Q1'] ? "Sim" : "Nāo",
+                  ),
+                  Item(
+                    label:
+                        "Estou ciente de que qualquer problema com a minha tatuagem deve ser tratado diretamente com o tatuador: ",
+                    value: data['s4Q2'] ? "Sim" : "Nāo",
+                  ),
+                  Item(
+                    label:
+                        "Autorizo a veiculação do trabalho executado através meio de comunicação isentando-o de qualquer bônus e/ou ônus advindo da exposição da imagem e qualquer processo decorrente: ",
+                    value: data['s4Q3'] ? "Sim" : "Nāo",
+                  ),
+                  const SizedBox(height: 90)
                 ],
               ),
             ),

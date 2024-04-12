@@ -95,7 +95,6 @@ class _SignTermPageState extends State<SignTermPage> {
       }
       return;
     }
-
     if (stepFive.signatureController.isEmpty) {
       setState(() {
         message = "Por favor, assine o documento.";
@@ -115,13 +114,16 @@ class _SignTermPageState extends State<SignTermPage> {
       s2Q2: stepTwo.q2.text,
       s2Q3: stepTwo.q3.text,
       s2Q4: stepTwo.q4.text,
-      s3Q1: stepThree.q1.text,
-      s3Q2: stepThree.q2.text,
-      s3Q3: stepThree.q3.text,
-      s4Q1: stepFour.q1.text,
-      s4Q2: stepFour.q2.text,
-      s4Q3: stepFour.q3.text,
-      s4Q4: stepFour.q4.text,
+      s3Q1: stepThree.q1.currentState?.value,
+      s3Q2: stepThree.q2.currentState?.value,
+      s3Q3: stepThree.q3.currentState?.value,
+      s3Q4: stepThree.q4.currentState?.value,
+      s3Q5: stepThree.q5.text,
+      s3Q6: stepThree.q6.text,
+      s3Q7: stepThree.q7.text,
+      s4Q1: stepFour.q1.currentState?.value,
+      s4Q2: stepFour.q2.currentState?.value,
+      s4Q3: stepFour.q3.currentState?.value,
       signature: signature,
     );
     termService.save(newTerm);
