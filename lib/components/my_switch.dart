@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyCheckbox extends StatelessWidget {
+class MySwitch extends StatelessWidget {
   final String? Function(bool?)? validator;
   final GlobalKey<FormFieldState> controller;
   final String label;
 
-  const MyCheckbox({
+  const MySwitch({
     super.key,
     required this.controller,
     required this.label,
